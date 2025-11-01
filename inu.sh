@@ -32,7 +32,7 @@ if [ -f "items.dat" ]; then
 fi
 
 echo -e "${GREEN}Downloading items.dat...${ENDCOLOR}"
-wget -q https://github.com/AyamNubCh/AnchProxy/raw/main/items.dat
+wget -q https://github.com/demsdivo11/lucky/raw/main/items.dat
 
 if [ -f "items.dat" ]; then
     echo -e "${GREEN}items.dat successfully downloaded!${ENDCOLOR}"
