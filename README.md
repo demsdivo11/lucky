@@ -1,3 +1,7 @@
+Changelog — v2.6.1
+FIX SHOWOC AND FASTDOOR
+
+
 Changelog — v2.6.0
 Added
 
