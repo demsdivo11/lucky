@@ -1,23 +1,19 @@
-#!/bin/bash
-
-RED="\e[31m"
-GREEN="\e[32m"
-ENDCOLOR="\e[0m"
+#!/usr/bin/env bash
 
 clear
-echo -e "${GREEN}Installing Proxy...${ENDCOLOR}"
+echo "Installing Proxy..."
 sleep 1
 
 if [ -f "Lucky271" ]; then
-    echo -e "${RED}Deleting old proxy...${ENDCOLOR}"
+    echo "Deleting old proxy..."
     rm Lucky271
     sleep 1
-    echo -e "${GREEN}Getting new proxy...${ENDCOLOR}"
+    echo "Getting new proxy..."
 fi
 
 wget -q https://github.com/demsdivo11/lucky/raw/main/Lucky271
 
 sleep 1
-echo -e "${GREEN}Proxy Installed${ENDCOLOR}"
-echo -e "${GREEN}Execute proxy with this command: ./Lucky271${ENDCOLOR}"
+echo "Proxy Installed"
+echo "Execute proxy with this command: ./Lucky271"
 chmod +x Lucky271
