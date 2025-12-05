@@ -19,5 +19,5 @@ wget -q https://github.com/demsdivo11/lucky/raw/main/Lucky271
 
 sleep 1
 echo -e "${GREEN}Proxy Installed${ENDCOLOR}"
-echo -e "${GREEN}Execute proxy with this command: ./Lucky271${ENDCOLOR}"
+echo -e "${GREEN}Run proxy with: ./Lucky271${ENDCOLOR}"
 chmod +x Lucky271
