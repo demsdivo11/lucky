@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-RED='\033[31m'
-GREEN='\033[32m'
-ENDCOLOR='\033[0m'
+RED="\e[31m"
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
 
 clear
 echo -e "${GREEN}Installing Proxy...${ENDCOLOR}"
@@ -19,5 +19,5 @@ wget -q https://github.com/demsdivo11/lucky/raw/main/Lucky271
 
 sleep 1
 echo -e "${GREEN}Proxy Installed${ENDCOLOR}"
-echo -e "${GREEN}Run proxy with: ./Lucky271${ENDCOLOR}"
+echo -e "${GREEN}Execute proxy with this command: ./Lucky271${ENDCOLOR}"
 chmod +x Lucky271
