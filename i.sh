@@ -1,4 +1,3 @@
-
 #!/bin/bash
 set -e
 
@@ -12,7 +11,7 @@ download_file() {
     local out="$2"
 
     if command -v curl >/dev/null 2>&1; then
-        curl -fsSL "$url" -o "$out" && return 0
+        curl -fsL "$url" -o "$out" 2>/dev/null && return 0
     fi
     if command -v wget >/dev/null 2>&1; then
         wget -q -O "$out" "$url" && return 0
@@ -55,14 +54,14 @@ if grep -q "arm64-v8a/LuckyProxy\|armeabi-v7a/LuckyProxy" LuckyProxy 2>/dev/null
     for abi in arm64-v8a armeabi-v7a; do
         mkdir -p "$abi"
         if download_first "$abi/LuckyProxy" \
-            "${RAW_BASE}/out/android/${abi}/LuckyProxy" \
-            "${RAW_BASE}/${abi}/LuckyProxy"; then
+            "${RAW_BASE}/${abi}/LuckyProxy" \
+            "${RAW_BASE}/out/android/${abi}/LuckyProxy"; then
             chmod 755 "$abi/LuckyProxy"
         else
             echo -e "${RED}Failed to download ${abi}/LuckyProxy.${ENDCOLOR}"
             echo -e "${RED}Upload binary to one of:${ENDCOLOR}"
-            echo -e "${RED}  ${RAW_BASE}/out/android/${abi}/LuckyProxy${ENDCOLOR}"
             echo -e "${RED}  ${RAW_BASE}/${abi}/LuckyProxy${ENDCOLOR}"
+            echo -e "${RED}  ${RAW_BASE}/out/android/${abi}/LuckyProxy${ENDCOLOR}"
             exit 1
         fi
     done
